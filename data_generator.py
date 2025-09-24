@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import json
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional
+from typing import Any, Dict, List, Tuple, Optional
 from utils import DataValidator, DataGenerationError, get_logger
 from config import config_manager
 
@@ -140,7 +140,7 @@ def generate_lifestyle_data() -> pd.DataFrame:
         logger.error(f"Failed to generate lifestyle data: {e}")
         raise DataGenerationError(f"Data generation failed: {e}") from e
 
-def generate_summary_statistics(df: pd.DataFrame) -> Dict[str, Any]:
+def generate_summary_statistics(df: pd.DataFrame):
     """
     Generate summary statistics for key insights.
     
