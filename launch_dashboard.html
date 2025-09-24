@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Choices Dashboard Launcher</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            margin: 20px;
+        }
+        h1 {
+            color: #2E86AB;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .launch-btn {
+            background: linear-gradient(45deg, #2E86AB, #A23B72);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .launch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .instructions h3 {
+            color: #2E86AB;
+            margin-top: 0;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #2E86AB;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Lifestyle Choices Dashboard</h1>
+        <p class="subtitle">Interactive Analysis of How Lifestyle Choices Affect Life Expectancy</p>
+        
+        <a href="http://localhost:8501" class="launch-btn" target="_blank">
+            🚀 Launch Interactive Dashboard
+        </a>
+        
+        <div class="instructions">
+            <h3>📋 How to Use:</h3>
+            <div class="step">
+                <strong>Step 1:</strong> Make sure the virtual environment is activated and Streamlit is running
+            </div>
+            <div class="step">
+                <strong>Step 2:</strong> Click the "Launch Interactive Dashboard" button above
+            </div>
+            <div class="step">
+                <strong>Step 3:</strong> Fill in your lifestyle choices in the sidebar
+            </div>
+            <div class="step">
+                <strong>Step 4:</strong> Click "Analyze My Lifestyle Impact" to see your personalized results
+            </div>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Note:</strong> If the dashboard doesn't load, make sure to run <code>run_dashboard.bat</code> first to start the Streamlit server.
+        </div>
+        
+        <div style="margin-top: 30px; color: #666; font-size: 0.9rem;">
+            <p>🎯 <strong>Features:</strong> Personalized analysis, interactive visualizations, improvement suggestions</p>
+            <p>📊 <strong>Data:</strong> 163,840+ lifestyle combinations analyzed</p>
+            <p>🔬 <strong>Based on:</strong> WHO and CDC research data</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  lifestyle-analysis:
+    build: .
+    container_name: lifestyle-analysis-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./exports:/app/exports
+      - ./logs:/app/logs
+    environment:
+      - DEBUG=false
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0 if os.path.exists('/app/data/lifestyle_data.csv') else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  streamlit-dashboard:
+    build: .
+    container_name: lifestyle-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./exports:/app/exports
+    environment:
+      - DEBUG=false
+    command: ["streamlit", "run", "interactive_dashboard.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+    depends_on:
+      - lifestyle-analysis
+    restart: unless-stopped
+
