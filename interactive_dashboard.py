@@ -499,7 +499,7 @@ def main():
     st.markdown(
         """
         <div style="text-align: center; color: #666; font-size: 0.9rem;">
-            <p>📊 Data Visualization Portfolio Project | Inspired by FlowingData</p>
+            <p>📊 Data Visualization Portfolio Project | Created by Guru Nandhan</p>
             <p>⚠️ This analysis is for educational purposes only and should not replace medical advice</p>
         </div>
         """, 
